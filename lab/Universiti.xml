@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Universiti.xsl"?>
+<!DOCTYPE Universiti [
+<!ELEMENT Universiti (title, Course, Fee)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT Course (#PCDATA)>
+<!ELEMENT Fee (#PCDATA)>
+]>
+<Universiti>
+	<University category="PC">
+		<title>MSC (Computer Science,Computer Science and Applications,DataAnalytics)</title>
+		<Course>MSC</Course>
+		<Fee>500000</Fee>
+		<description>Candidates who have passed the Undergraduate degree examination with 50 % aggregate marks and 50% of marks in the cognate subject (Mathematics) from any recognised University in India or abroad recognised by UGC / AIU are eligible to apply.Applicants who are in the final year of their studies and writing their final year in March-May 2020 should have secured 50% or above aggregate in all the Semesters / Years of Undergraduate Examinations conducted so far and 50% of marks in the cognate subject.</description>
+	</University>
+
+
+	<University category="Mobile">
+		<title>MBA Executive</title>
+		<Course>MBA</Course>
+		<Fee>100000</Fee>
+		<description>Pass in UG level examinations (10+2+3) with an aggregate of 50% marks or equivalent grade in any degree and working currently in Bangalore with a minimum of 2 of years work experience.OR At least one year work experience with a valid composite score of 500 or above in the Management Aptitude Test (MAT) conducted by AIMA in either September - 2019 / December 2019 / February 2020 OR A composite score of 300 or above in GMAT 2019 OR 2020 OR A composite score or 300 or above in GRE 2019 OR 2020 OR
+60 percentile or above in the Common Management Admission Test (CMAT 2020) OR 60 percentile or above in the Common Admission Test 2019 (CAT) conducted by the Indian Institutes of Management (IIMs) OR 60 percentile or above in the XAT Test for Management Admissions (XAT) 2020 60 percentile or above in the ATMA 2020.</description>
+</University>
+
+
+<University category="PC">
+		<title>Master of Commerce</title>
+		<Course>mcom</Course>
+		<Fee>150000</Fee>
+		<description>Candidates who have passed an Undergraduate degree  (BCom / BBM / BBA) with 50 % aggregate marks from any recognised University in India or abroad recognised by UGC / AIU are eligible to apply.
+ Students appearing for their final degree examinations in March-May 2020 are also eligible to apply (Applicants who are in the final year of their studies should have secured 50% or above aggregate in all the Semesters / Years of Undergraduate Examinations conducted so far) .</description>
+</University>	
+
+
+<University category="PC">
+		<title>Master of Business Administration (MBA)</title>
+		<Course>MBA</Course>
+		<Fee>50000</Fee>
+		<description>A composite score of 500 or above in the Management Aptitude Test (MAT) conducted by AIMA in either September 2019 OR December 2019 OR February 2020 OR
+A composite score of 450 or above in GMAT 2019 / 2020 OR
+A composite score of 295 or above in GRE 2019 / 2020 OR
+60 Percentile or above in Common Management Admission Test (CMAT 2020) OR
+60 Percentile or above in Common Admission Test (CAT 2019) conducted by the Indian Institutes of Management (IIMs) OR
+60 Percentile or above in Xavier Aptitude Test (XAT 2020) OR
+60 Percentile or above in Association of Indian Management Schools Test (ATMA 2020).
+ </description>	
+</University>
+</Universiti>

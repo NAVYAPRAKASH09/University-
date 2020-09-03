@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<title>My university</title><center>
+<img src="LOGO.png"></center><button onclick="goBack()">HOME</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+<style>
+
+.header{  width:100%; height:100px; background:NavajoWhite;  border-radius:  10px; font-size: 40px; text-align:  Centre;}
+
+.footer{   width :100%; padding:100px;  background:  NavajoWhite; border-radius}
+  </style>
+ 
+<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/920E36DC-3C46-1941-931C-7AB5953883BC/main.js" charset="UTF-8"></script></head>
+<body >
+
+<div  class="header">
+  <center><h1="color:White;">
+<font size="35"> <b> SEEKSHA UNIVERSITY</b> </font>
+  </center>  </h1>
+
+</div>
+
+
+<body style="background-color:LemonChiffon;">
+
+        <div>
+		<center>
+		<h3>Accessing Node by Node Location</h3> 
+  <p id="location"></p>
+  <h3>Accessing Node by Node Type</h3> 
+  <p id="nodetype"></p>
+  <h3>Accessing Node by Node Predicate</h3> 
+  <p id="predicate"></p>
+  <h3>Accessing Node by Node Node-Set</h3> 
+  <p id="nodeset"></p>
+
+</div>  
+<script>
+var txt = "";
+if (window.XMLHttpRequest)  
+  {// code for IE7+, Firefox, Chrome, Opera, Safari  
+      xmlhttp=new XMLHttpRequest();  
+  }  
+else  
+  {// code for IE6, IE5  
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
+  }  
+xmlhttp.open("GET","Universiti.xml",false);  
+xmlhttp.send();  
+xml = xmlhttp.responseXML;  
+
+//Accessing By Node Location
+var path = "/Universiti/Universiti/*";  
+var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+var result = nodes.iterateNext();
+while (result) {
+    txt += result.childNodes[0].nodeValue + "<br>";
+    result = nodes.iterateNext();  
+}
+document.getElementById("location").innerHTML = txt;
+
+//Accessing By Node Type
+path = "//*";  
+txt = "";
+var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+var result = nodes.iterateNext();
+while (result) {
+    txt += result.childNodes[0].nodeValue + "<br>";
+    result = nodes.iterateNext();  
+}
+document.getElementById("nodetype").innerHTML = txt;
+
+//Accessing By Predicate
+path = "/Universiti/Universiti[last()]/*";  
+txt = "";
+var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+var result = nodes.iterateNext();
+while (result) {
+    txt += result.childNodes[0].nodeValue + "<br>";
+    result = nodes.iterateNext();  
+}
+document.getElementById("predicate").innerHTML = txt;
+
+
+//Accessing By Node Set Function
+var path = "fn:ceil(/Universiti/Universiti[1]/ratings)";  
+txt = "";
+var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+var result = nodes.iterateNext();
+while (result) {
+    txt += result.childNodes[0].nodeValue + "<br>";
+    result = nodes.iterateNext();  
+}
+document.getElementById("nodeset").innerHTML = txt;
+
+
+</script>
+</center>
+		
+	<div class="footer">
+<h2>
+<button type="button" onclick="alert('thank you for visting')">Click Me!</button>
+ <p><a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our course patner</a></p>
+</h2>
+  copyright   @2018SEEKSHA UNIVERSITY
+!
+</div>
+
+</body>
+</html>
